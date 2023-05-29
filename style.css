@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.line-1 {
+  border-top: 2px solid hsl(0, 0%, 86%);
+  @apply lg:-mr-[85px];
+}
+
+.dates {
+  @apply border border-gray-300 focus:outline-none focus:ring focus:ring-purple text-black text-xl rounded-lg p-2.5 w-[43%] cursor-pointer;
+}
+
+h4 {
+  @apply text-smokey-grey;
+}
