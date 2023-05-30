@@ -9,6 +9,14 @@
   margin: 0;
 }
 
+body {
+  @apply bg-off-white font-Poppins min-h-screen flex flex-col justify-center items-center mx-auto;
+}
+
+.container {
+  @apply bg-white px-6 py-12 rounded-2xl rounded-br-[25%] flex flex-col lg:pr-32 lg:pl-10;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -23,9 +31,30 @@
 }
 
 .dates {
-  @apply border border-gray-300 focus:outline-none focus:ring focus:ring-purple text-black text-xl rounded-lg p-2.5 w-[43%] cursor-pointer;
+  @apply border border-gray-300 hover:outline-none hover:ring hover:ring-purple text-black text-xl rounded-lg p-2.5 w-[43%] cursor-pointer;
 }
 
 h4 {
   @apply text-smokey-grey;
+}
+
+.error-message {
+  font-style: italic;
+  font-weight: 400;
+  @apply text-light-red;
+  font-size: 0.7rem;
+  width: auto;
+  display: none;
+}
+
+.form-date .form-dates .form-group.error h4 {
+  @apply text-light-red;
+}
+
+.form-date .form-dates .form-group.error > input {
+  @apply border border-light-red hover:border hover:border-none hover:outline-none hover:ring hover:ring-black;
+}
+
+.form-date .form-dates .form-group.error > .error-message {
+  display: flex;
 }
