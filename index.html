@@ -3,46 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./build/output.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-    <script src="./index.js"></script>
-
     <title>Age calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!--Styles-->
+    <link rel="stylesheet" href="./build/output.css" />
+
+    <!--scripts-->
+    <script src="./index.js" defer></script>
+
   </head>
-  <body>
+  <body class="bg-off-white">
 
-
-    <section class="font-Poppins bg-off-white min-h-screen flex flex-col justify-center items-center mx-auto">
-    <div class="bg-white px-6 py-12 rounded-2xl rounded-br-[25%] flex flex-col lg:pr-32 lg:pl-10">
-        <form class="flex flex-1 mb-16 lg:mb-10 lg:gap-0">
-        <div class="day -mr-36">
+    
+    <section class="font-Poppins min-h-screen flex flex-col justify-center items-center mx-auto">
+    <div class="form-date bg-white px-6 py-12 rounded-2xl rounded-br-[25%] flex flex-col lg:pr-32 lg:pl-10">
+        <form class="form-dates flex flex-1 mb-16 lg:mb-10 lg:gap-0" id="form-dates">
+        <div class="form-group -mr-36">
           <h4 class="text-xs mb-2">DAY</h1>
-          <input type="number" name="Day" placeholder="DD" class="input_day dates">
+          <input type="number" id="Day" placeholder="DD" class="dates">
+          <span class="error-message flex">Must be a valid day</span>
         </div>
-        <div class="month -mr-36">
+        <div class="form-group -mr-36">
           <h4 class="text-xs mb-2">MONTH</h1>
-            <input type="number" name="Month" placeholder="MM" class="input_month dates">
+            <input type="number" id="Month" placeholder="MM" class="dates">
+            <span class="error-message flex">Must be a valid month</span>
         </div>
-        <div class="year -mr-36">
+        <div class="form-group -mr-36">
           <h4 class="text-xs mb-2">YEAR</h1>
-            <input type="number" name="Year" placeholder="YYYY" class="input_year dates">
+            <input type="number" id="Year" placeholder="YYYY" class="dates">
+            <span class="error-message flex">Must be in the past</span>
           </div>
         </form>
       <div class="mb-20 lg:mb-10 flex line-1 justify-center items-center lg:justify-end">
-        <div class="submit-btn w-16 h-16 bg-purple hover:bg-off-black rounded-full justify-center items-center flex absolute cursor-pointer">
-          <img src="./assets/images/icon-arrow.svg" alt="">
-        </div>
+        <button class="w-16 h-16 bg-purple hover:bg-off-black rounded-full justify-center items-center flex absolute cursor-pointer" id="submit-btn" form="form-dates">
+          <img src="./assets/images/icon-arrow.svg" alt="submit">
+        </button>
       </div>
-      <div class="result text-off-black text-6xl">
-        <div class="years">
-         <span class="text-purple output_year"> -- </span> years</div>
-        <div class="months">
-          <span class="text-purple output_month"> -- </span> months</div>
-        <div class="days">
-          <span class="text-purple output_day"> -- </span> days</div>
+      <div class="result text-off-black text-6xl" id="result">
+        <div id="output-year" class = "time">
+         <span class="text-purple"> -- </span> years</div>
+        <div id="output_month" class = "time">
+          <span class="text-purple"> -- </span> months</div>
+        <div id="output_day "class = "time">
+          <span class="text-purple"> -- </span> days</div>
       </div>
     </div>
-    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Mike Mutaki</a>.</div>
+    <div class="attribution mt-10">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Mike Mutaki</a>.</div>
   </section>
   </body>
 </html>
