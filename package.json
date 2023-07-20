@@ -2,5 +2,9 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "tailwindcss": "^3.3.2"
+  },
+  "scripts": {
+    "watch": "npx tailwindcss -i ./src/style.css -o ./build/output.css --watch ",
+    "minify": "npx tailwindcss -i ./style.css -o ./build/output.css --minify"
   }
 }
